@@ -2,16 +2,16 @@
 //Модуль: Z-9 - MOD_ZZ_Z
 //Остаток от деления большего целого числа на меньшее или равное натуральное с остатком (делитель отличен от нуля)
 
-function MOD_ZZ_Z(A, B)
+function mod_zz_z(A, B)
 {
 	if (B.d != 0)     //Если делитель не равен нулю
 	{
 	  if (A.s != B.s)     //Сравниваем их знаки
 	    {
-		    return MUL_Z-_Z(SUB_ZZ_Z(A.d, MUL_ZZ_Z(B.d, DIV_ZZ_Z(A.d, B.d))));      //Если не одинаковые,
+		    return mul_z-_z(sub_zz_z(A.d, mul_zz_z(B.d, div_zz_z(A.d, B.d))));      //Если не одинаковые,
 		                                                                            //то возвращает значение умноженное на (-1)
 		  }
-		else return SUB_ZZ_Z(A.d, MUL_ZZ_Z(B.d, DIV_ZZ_Z(A.d, B.d)));     //Иначе, возвращает разность между A.d и B.d,
+		else return sub_zz_z(A.d, mul_zz_z(B.d, div_zz_z(A.d, B.d)));     //Иначе, возвращает разность между A.d и B.d,
 		                                                                  //умноженным на целое частное между A.d и B.d
 	}
 }
