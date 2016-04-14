@@ -14,11 +14,11 @@ MathLib.mod_zz_z = function(zA, zB)
 	{
 	  if (A.s != B.s)     //Сравниваем их знаки
 	    {
-		    return MathLib.mul_z-_z(MathLib.sub_zz_z(A.d, MathLib.mul_zz_z(B.d, MathLib.div_zz_z(A.d, B.d))));      //Если не одинаковые,
-		                                                                            //то возвращает значение умноженное на (-1)
+		    return MathLib.mul_z-_z(MathLib.sub_zz_z(A.d, MathLib.mul_zz_z(B.d, MathLib.div_zz_z(A.d, B.d)))); 	//Если не одинаковые,
+		                                                                            				//то возвращает значение умноженное на (-1)
 		  }
-		else return MathLib.sub_zz_z(A.d, MathLib.mul_zz_z(B.d, MathLib.div_zz_z(A.d, B.d)));     //Иначе, возвращает разность между A.d и B.d,
-		                                                                  //умноженным на целое частное между A.d и B.d
+		else return MathLib.sub_zz_z(A.d, MathLib.mul_zz_z(B.d, MathLib.div_zz_z(A.d, B.d)));   //Иначе, возвращает разность между A.d и B.d,
+		                                                                  			//умноженным на целое частное между A.d и B.d
 	}
 	else return 0; 		//Вернуть 0, если делитель равен 0
 }
